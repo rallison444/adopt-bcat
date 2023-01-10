@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt A Cat</title>
+    <style>
+
+        .catHeader {
+            text-align: center;
+            background-color: #EE6F25;
+            color: white;
+            font-size: 40px;
+            height: 10vh;
+        }
+
+        .black-cat {
+            display: block;
+            margin: 0 auto;
+            width: 600px;
+            padding: 40px;
+        }
+
+        .facts {
+            display: block;
+            margin: auto;
+            padding: 40px;
+            max-width: 600px;
+            text-align: left;
+            line-height: 24px;
+            background-color: white;
+
+        }
+
+        .national-black-cat-day {
+            max-width: 150px;
+            padding: 20px;
+        }
+        .cat-adoption {
+            display: grid;
+            margin: 0 auto;
+            text-align: center;
+            color: white;
+            background-color: #EE6F25;
+            border-radius: 20px;
+            border: solid #EE6F25;
+            padding: 15px 18px;
+            font-size: 16px;
+            border-width: 2px;
+            font-weight: bolder;
+            box-shadow: 2px 2px 5px 1px grey;
+            transition-property: all;
+            transition-duration: 4mms;
+        }
+
+        .cat-adoption:hover {
+            cursor: pointer;
+            border: solid #EE6F25;
+            background-color: white;
+            font-weight: bolder;
+            color: #EE6F25;
+            border-width: 2px;
+        }
+
+        label {
+            display: block;
+            margin: 0.5rem 0;
+        }
+        
+        body {
+                background: linear-gradient(109.6deg, rgb(223, 234, 247) 11.2%, rgb(244, 248, 252) 91.1%); 
+                font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                padding: 0px;
+            }
+
+        .footer {
+            background-color: #03A39E;
+            padding: 40px;
+            text-align: center;
+            color: white;
+            border-bottom: 4mm ridge rgb(255, 94, 5);
+        }
+
+        .footer a:link {
+            color:white;
+        }
+
+        .footer a:visited{
+            color: white;
+        }
+
+        .fill-form {
+            width: 100%;
+            height: 50vh;
+            margin: 0;
+            background-color: #EAEAEA;
+            color: black;
+}
+
+        span {
+            font-weight: bolder;
+        }
+
+        fieldset {
+            border: none;
+            border-bottom: 3px solid #3b3b4f;
+        }
+
+        fieldset:last-of-type {
+            border-bottom:none;
+        }
+
+        
+        form {
+            margin: 0 auto;
+            background-color: #EAEAEA;
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="cat">
+        <img class = "national-black-cat-day" src="https://cdn-icons-png.flaticon.com/512/249/249387.png" alt="National Black Cat Day" />
+        <h1 class="catHeader">Adopt A Black Cat
+        </h1>
+        <img class ="black-cat" src="https://i.etsystatic.com/6275929/r/il/63f2bf/343963356/il_fullxfull.343963356.jpg" alt = "Black Kitten" />
+        <p class="facts">National Black Cat Day is October 27. <span>The reason we need such special recognition days is because black cats have been so misunderstood and maligned throughout history.</span> So, on this day, here’s a chance to think about some of the ways in which black cats make the best pets. It’s a chance to educate and spread the word about how wonderful black cats are.
+            <br> <br>Black cats have been found to have lower odds of adoption in American shelters compared to other colors except brown, although black animals in general take more time to find homes. Some shelters also suspend or limit adoptions of black cats around Halloween for fear they will be tortured, or used as "living decorations" for the holiday and then abandoned. Despite this, no one has ever documented in the history of humane work any relationship between adopting black cats and cats being killed or injured. When such killings are reported, forensic evidence has pointed to natural predators, such as coyotes, eagles, or raptors as the likely cause. Limiting or suspending adoptions around Halloween also places more cats of all colors at risk of dying in shelters due to overcrowding. <br>
+            <br> While every cat has their own personality, many black cats are playful, fun-loving, and full of energy. It's almost like they try to be lovable goofballs to <em>overcome the negative stereotypes</em>. If you are looking for a loyal and affectionate feline,<strong> adopting a black cat is the way to go.</strong>
+        <a href = "https://www.kyhumane.org/black-cat-myth/" target="_blank" class="learn-more">Learn More</a> </p>
+        <button class="cat-adoption">Adopt Now 🐈‍⬛</button>
+    </div>
+    <div class="fill-form">
+        <hr />
+        <h2 class="registration">Registration Form</h2>
+        <p>Please fill out this form with the required information in order to get emails about recent cat adoption listings.</p>
+        <form method="post" action='https://www.petfinder.com/'>
+        <fieldset>
+            <label for="first-name">Enter Your First Name: <input id="first-name" type="text" required class="inline" /></label>
+            <label for="last-name">Enter Your Last Name: <input id="last-name" type="text" required class="inline"/></label>
+            <label for="email">Enter Your Email: <input id="email" type="email" required class="inline" /></label>
+        </fieldset>
+        <fieldset>
+            <label><input type="checkbox" required class ="inline" /> I accept the terms and conditions</label>
+        </fieldset>
+        <input type="submit" value="Submit" />
+        </form>
+        <p class="footer">This page was built by 
+            <a href="https://github.com/rallison444" target="_blank"> Raneecia Allison</a>
+        </p>
+</div>
+<script>
+    function updateHeading(newHeading) {
+        let heading = document.querySelector(".catHeader");
+        heading.innerHTML = newHeading;
+    }
+    function adoptNow() {
+        let name = prompt("What is your name?");
+        let answer = prompt("Are you looking into adopting a black cat? 🐈‍⬛");
+        answer = answer.toLowerCase().trim();
+        if (answer == "yes") {
+            let email = prompt("What's a good email to contact you with?");
+            updateHeading(`${name}, we will be contacting you shortly! 😸`);
+        } else {
+        alert("Okay, have a good day!");
+        }
+    }
+
+    
+    let catAdoption = document.querySelector(".cat-adoption");
+    catAdoption.addEventListener("click", adoptNow);
+</script>
+</body>
+</html>
